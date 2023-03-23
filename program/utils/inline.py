@@ -20,7 +20,7 @@ def stream_markup(user_id):
       InlineKeyboardButton(text="Kanalımız", url=f"https://t.me/httpsiir_Edebiyat_vefa"),
     ],
     [
-      InlineKeyboardButton(text="•Kapat", callback_data="set_close"),
+      InlineKeyboardButton(text="•Kapat", callback_data="Kapatmak"),
     ],
   ]
   return buttons
@@ -49,7 +49,7 @@ close_mark = InlineKeyboardMarkup(
   [
     [
       InlineKeyboardButton(
-        "🗑 Kapat", callback_data="set_close"
+        "🗑 Kapat", callback_data="kapatmak"
       )
     ]
   ]
@@ -60,7 +60,7 @@ back_mark = InlineKeyboardMarkup(
   [
     [
       InlineKeyboardButton(
-        "🔙 Geri Dön", callback_data="stream_menu_panel"
+        "🔙 Geri Dön", callback_data="Yayın_menüsü_paneli"
       )
     ]
   ]
