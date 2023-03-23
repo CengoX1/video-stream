@@ -16,11 +16,11 @@ def stream_markup(user_id):
       InlineKeyboardButton(text="‣‣I", callback_data=f'set_skip | {user_id}'),
     ],
     [
-      InlineKeyboardButton(text="Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/Team_Bot_Support"),
-      InlineKeyboardButton(text="Uᴘᴅᴀᴛᴇs", url=f"https://t.me/team_bot_update"),
+      InlineKeyboardButton(text="Grubumuz", url=f"https://t.me/sohbet_muhabbet_tanisma_ark"),
+      InlineKeyboardButton(text="Kanalımız", url=f"https://t.me/httpsiir_Edebiyat_vefa"),
     ],
     [
-      InlineKeyboardButton(text="• Cʟᴏsᴇ", callback_data="set_close"),
+      InlineKeyboardButton(text="•Kapat", callback_data="set_close"),
     ],
   ]
   return buttons
@@ -39,7 +39,7 @@ def menu_markup(user_id):
       InlineKeyboardButton(text="🔊", callback_data=f'set_unmute | {user_id}'),
     ],
     [
-      InlineKeyboardButton(text="🔙 Go Back", callback_data='stream_home_panel'),
+      InlineKeyboardButton(text="🔙 Geri Dön", callback_data='stream_home_panel'),
     ]
   ]
   return buttons
@@ -49,7 +49,7 @@ close_mark = InlineKeyboardMarkup(
   [
     [
       InlineKeyboardButton(
-        "🗑 Close", callback_data="set_close"
+        "🗑 Kapat", callback_data="set_close"
       )
     ]
   ]
@@ -60,7 +60,7 @@ back_mark = InlineKeyboardMarkup(
   [
     [
       InlineKeyboardButton(
-        "🔙 Go Back", callback_data="stream_menu_panel"
+        "🔙 Geri Dön", callback_data="stream_menu_panel"
       )
     ]
   ]
