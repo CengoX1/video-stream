@@ -56,24 +56,24 @@ async def update_admin(client, message: Message):
         new_admins.append(u.user.id)
     admins[message.chat.id] = new_admins
     await message.reply_text(
-        "✅ Bot **reloaded** correctly!\n✅ The **Admin list** has **updated.**"
+        "✅ Bot Doğru bir şekilde yenilendi!\n✅ Admin Lisesi Güncellendi."
     )
 
 
 @Client.on_message(
-    command(["stop", f"stop@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"])
+    command(["bitir", f"stop@{BOT_USERNAME}", "end", f"end@{BOT_USERNAME}", "vstop"])
     & other_filters
 )
 @authorized_users_only
 @check_blacklist()
-async def stop(client, m: Message):
+async def bitir(client, m: Message):
     chat_id = m.chat.id
     if chat_id in QUEUE:
         try:
             await calls.leave_group_call(chat_id)
             await remove_active_chat(chat_id)
             clear_queue(chat_id)
-            await m.reply_text("✅ The userbot has disconnected from the video chat.")
+            await m.reply_text(" The userbot has disconnected from the video chat.")
         except Exception as e:
             traceback.print_exc()
             await m.reply_text(f"🚫 **error:**\n\n`{e}`")
